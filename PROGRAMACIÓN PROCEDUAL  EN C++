@@ -1,0 +1,26 @@
+#include stdio.h
+
+int combinacion(int num1, int num2);
+int factorial(int num);
+
+int main(){
+  int num1=10;
+  int num2=6;
+  printf(%dn, combinacion(num1,num2));
+  return 0;
+} 
+
+int combinacion(int num1, int num2){
+    int numerador = factorial(num1);
+    int denominador =(factorial(num2)  factorial(num1 - num2));
+    return numerador  denominador;
+    }
+
+int factorial(int num){
+    if(num == 0){
+        return 1;
+        }
+    else{
+        return factorial(num -1)  num;
+        }
+}
